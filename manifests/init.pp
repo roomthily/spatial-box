@@ -81,7 +81,7 @@ class rasterio {
 	exec {
 		"rio":
 		command => "/usr/bin/sudo pip install rasterio",
-		require => Package["python", "python-pip", "gdal-bin"]
+		require => [Package["python", "python-pip", "gdal-bin"], Exec["reqs"]]
 	}
 }
 
